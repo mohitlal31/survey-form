@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Serif JP', sans-serif;
+  color: #fff; /* Fallback for older browsers */
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url("../img/backgrounds-blank-blue-953214.jpg"); */
+  /* background-color: #E56E31; */
+  background: linear-gradient(60deg, #FFBC58, #FC577D);
+  background-size: cover;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+fieldset {
+  border: none;
+  padding-left: 0;
+  padding-right: 0
+}
+
+legend {
+  padding-left: 0;
+}
+
+.form-container {
+  background-color: white;
+  /* background-color: transparent; */
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 80px 120px;
+  font-size: 20px;
+  min-height: 100%;
+  line-height: 1.5;
+  border-radius: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.input-field {
+  border: none;
+  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgba(161, 135, 141, 0.7);
+  background-color: transparent;
+  color: #000; /* Fallback for older browsers */
+  color: rgba(161, 135, 141, 0.7);
+  display: block;
+  font-size: 20px;
+  width: 100%;
+}
+
+.form-container label {
+  display: block;
+  cursor: pointer;
+}
+
+.form-container legend {
+  font-size: 25px;
+}
+
+/* custom radio button */
+.radio-button {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.radio-button::after {
+  content: "";
+  display: none;
+  position: relative;
+  top: 5px;
+	left: 5px;
+  width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: white;
+}
+
+input:checked ~ .radio-button::after {
+    display: block;
+}
+
+/* hide the original radio button */
+input[type="radio"] {
+  display: none;
+}
+
+/* On mouse-hover, add a grey background color to the radio button*/
+label:hover .radio-button {
+  background-color: #bbb;
+}
+
+/* placed after above rule as button color should not
+   change on hovering for checked items */
+input:checked ~ .radio-button {
+  background-color: #E56E31;
+}
+
+/* On mouse-hover, make the label text darker */
+label:hover {
+  color: #000; /* Fallback for older browsers */
+  color: rgba(0, 0, 0, 1);
+}
+
+input[type="submit"] {
+  padding: 10px;
+  color: white;
+  background-color: #00A670;
+  border-radius: 12px;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 15px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}

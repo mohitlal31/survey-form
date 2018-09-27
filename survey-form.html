@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
+  <title>Customer Survey </title>
+</head>
+
+<body>
+  <h1>Survey</h1>
+  <form class="form-container">
+
+    <fieldset>
+      <label for="name">Full Name
+        <input class="input-field" type="text" name="fullName" placeholder="Full Name" id="name" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="email">Email Address
+        <input class="input-field" type="email" name="email" placeholder="Email Address" id="email" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="age">Age
+        <input class="input-field" type="number" name="age" placeholder="Age" min="1" max="120" id="age" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Gender</legend>
+      <label for="male">
+        <input type="radio" name="gender" id="male" value="male">
+        <span class="radio-button"></span>Male
+      </label>
+      <label for="female">
+        <input type="radio" name="gender" id="female" value="female">
+        <span class="radio-button"></span>Female
+      </label>
+      <label for="other">
+        <input type="radio" name="gender" id="other" value="other">
+        <span class="radio-button"></span>Other
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Occupation</legend>
+      <label for="homemaker">
+        <input type="radio" name="occupation" id="homemaker" value="homemaker">
+        <span class="radio-button"></span>Homemaker
+      </label>
+      <label for="self-employed">
+        <input type="radio" name="occupation" id="self-employed" value="self-employed">
+        <span class="radio-button"></span>Self-Employed
+      </label>
+      <label for="corporate">
+        <input type="radio" name="occupation" id="corporate" value="corporate">
+        <span class="radio-button"></span>Employee - Corporate
+      </label>
+      <label for="start-up">
+        <input type="radio" name="occupation" id="start-up" value="start-up">
+        <span class="radio-button"></span>Employee - Start-up
+      </label>
+      <label for="student">
+        <input type="radio" name="occupation" id="student" value="student">
+        <span class="radio-button"></span>Student
+      </label>
+    </fieldset>
+
+    <!-- The <span class="radio-button"></span> was placed after the input[radio]
+    so as to access it from css in reference to input[radio] using ~ combinator -->
+    <fieldset>
+      <legend>Education</legend>
+      <label for="school">
+        <input type="radio" name="education" id="school" value="school">
+        <span class="radio-button"></span>School
+      </label>
+      <label for="under-graduate">
+        <input type="radio" name="education" id="under-graduate" value="under-graduate">
+        <span class="radio-button"></span>Under-graduate
+      </label>
+      <label for="post-graduate">
+        <input type="radio" name="education" id="post-graduate" value="post-graduate">
+        <span class="radio-button"></span>Post-graduate
+      </label>
+      <label for="professional-degree">
+        <input type="radio" name="education" id="professional-degree" value="professional-degree">
+        <span class="radio-button"></span>Professional degree
+      </label>
+      <label for="occupation-other">
+        <input type="radio" name="education" id="occupation-other" value="occupation-other">
+        <span class="radio-button"></span>Other
+      </label>
+    </fieldset>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+</html>
